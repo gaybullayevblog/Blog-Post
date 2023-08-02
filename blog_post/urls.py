@@ -3,12 +3,35 @@ from .views import (BlogPostView,
                     BlogDetailView, 
                     BlogCreateView, 
                     BlogUpdateView, 
-                    BlogDeleteView)
+                    BlogDeleteView,
+                    React,
+                    About,
+                    Javascript,
+                    Python,
+                    Vue,
+                    TelegramBot,
+                    Django,
+                    Linux,
+                    Tailwindcss,
+                    Bootstrap,
+                    Portfolio)
 
 urlpatterns = [
     path('post/<int:pk>/delete/', BlogDeleteView.as_view(), name='post_delete'),
     path('post/<int:pk>/edit', BlogUpdateView.as_view(), name='post_edit'),
     path('post/new/', BlogCreateView.as_view(), name='post_new'),
     path('post/<int:pk>/', BlogDetailView.as_view(), name='post_detail'),
-    path('', BlogPostView.as_view(), name='home')
+    path('', BlogPostView.as_view(), name='home'),
+    path('react/', React.as_view(), name='react'),
+    path('about/', About.as_view(), name='about'),
+    path('javascript/', Javascript.as_view(), name='javascript'),
+    path('python/', Python.as_view(), name='python'),
+    path('vue/', Vue.as_view(), name='vue'),
+    path('telegram_bot/', TelegramBot.as_view(), name='telegram_bot'),
+    path('django/', Django.as_view(), name='django'),
+    path('linux/', Linux.as_view(), name='linux'),
+    path('tailwindcss/', Tailwindcss.as_view(), name='tailwindcss'),
+    path('bootstrap/', Bootstrap.as_view(), name='bootstrap'),
+    path('portfolio/', Portfolio.as_view(), name='portfolio'),
+
 ]
