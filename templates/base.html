@@ -17,7 +17,18 @@
             <a href="{% url 'post_new' %}">+yangi post qo'shish</a>
         </div>
     </header>
-    
+
+    {% if user.is_authenticated %}
+    <p>{{ user.username }}, saytga xush kelibsiz</p>
+    <p><a href="{% url 'logout' %}">Logout</a></p>
+    {% else %}
+    <p>Siz saytga kirmagansiz</p>
+    <a href="{% url 'login' %}">Log In</a> |
+    <a href="{% url 'signup' %}">Sign Up</a>
+
+    {% endif %}
+
+
     <div>
         {% block content %}{% endblock content %}
     </div>
