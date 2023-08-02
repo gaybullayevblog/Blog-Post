@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1 style="color: red;">Blog Postni Taxrirlash</h1>
+
+<form action="" method="post"> {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Taxrirlash" />
+
+
+</form>
+
+{% endblock content %}

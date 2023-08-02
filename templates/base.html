@@ -9,7 +9,13 @@
 <body>
 
     <header>
-        <h1><a href="{% url 'home' %}">Blog Post</h1>
+        <div class="nav-left">
+            <h1><a href="{% url 'home' %}">Blog Post</h1>
+        </div>
+        
+        <div class="nav-right">
+            <a href="{% url 'post_new' %}">+yangi post qo'shish</a>
+        </div>
     </header>
     
     <div>
